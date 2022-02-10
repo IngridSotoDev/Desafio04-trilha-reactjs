@@ -1,11 +1,11 @@
 import styled, { css } from 'styled-components';
 
-// interface ContainerProps {
-//   isFocused: Boolean;
-//   isFilled: Boolean;
-// }
+interface ContainerProps {
+  isFocused: Boolean;
+  isFilled: Boolean;
+}
 
-export const Container = styled.div`
+export const Container = styled.div<ContainerProps>`
   display: flex;
   align-items: center;
 
@@ -43,7 +43,7 @@ export const Container = styled.div`
     flex: 1;
     background: transparent;
     border: 0;
-    color: #b7b7cc;
+    color: #3d3d4d;
 
     &::placeholder {
       color: #b7b7cc;

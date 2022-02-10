@@ -1,6 +1,10 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+interface ContainerProps {
+  available: Boolean;
+}
+
+export const Container = styled.div<ContainerProps>`
   background: #f0f0f5;
   border-radius: 8px;
 
@@ -139,6 +143,15 @@ export const Container = styled.div`
           -ms-transform: translateX(32px);
           transform: translateX(32px);
         }
+      }
+    }
+    
+    @media(max-width: 400px) {
+      flex-direction: column;
+
+      div.icon-container {
+        order: 1;
+        margin-top: 20px;
       }
     }
   }

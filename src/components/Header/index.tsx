@@ -3,11 +3,11 @@ import { FiPlusSquare } from 'react-icons/fi';
 import { Container } from './styles';
 import Logo from '../../assets/logo.svg';
 
-// interface HeaderProps {
-//   openModal: () => void;
-// }
+interface HeaderProps {
+  openModal: () => void;
+}
 
-export function Header(props) {
+export function Header({ openModal } : HeaderProps) {
   return (
     <Container>
       <header>
@@ -16,7 +16,7 @@ export function Header(props) {
           <div>
             <button
               type="button"
-              onClick={props.openModal}
+              onClick={openModal}
             >
               <div className="text">Novo Prato</div>
               <div className="icon">
